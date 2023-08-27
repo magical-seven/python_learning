@@ -1,0 +1,7 @@
+{'id': '1002', 'name': 'jack', 'english': 22, 'python': '99', 'java': '100'}
+{'id': '1003', 'name': 'lisi', 'english': 44, 'python': 77, 'java': 43}
+{'id': '1001', 'name': 'lili', 'english': 23, 'python': 43, 'java': 55}
+{'id': '1004', 'name': 'ing', 'english': 23, 'python': 5, 'java': 65}
+{'id': '1006', 'name': 'dzq', 'english': 100, 'python': 100, 'java': 100}
+{'id': '1007', 'name': 'zdm', 'english': 21, 'python': 3, 'java': 32}
+{'id': '1010', 'name': 'we', 'english': 12, 'python': 33, 'java': 43}
