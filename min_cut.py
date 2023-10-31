@@ -31,8 +31,10 @@ def ford_fulkerson(graph, source, sink):
 
         # 更新路径上的边的流量
         for u, v in zip(augmenting_path, augmenting_path[1:]):
-            graph[u][v]['flow'] += min_capacity
-            graph[v][u]['flow'] -= min_capacity  # 反向边
+            if graph.has_edge(u, v):  # 检查边是否存在
+                graph[u][v]['flow'] += min_capacity
+            else:
+                graph[v][u]['flow'] -= min_capacity  # 反向边
 
         augmenting_path = find_augmenting_path(graph, source, sink)
 
@@ -87,8 +89,6 @@ edges = [('S', 'A', 4), ('S', 'B', 2),
 
 G.add_nodes_from(nodes)
 G.add_weighted_edges_from(edges, weight='capacity')
-
-
 
 # 指定源节点和汇节点
 source = 'S'
