@@ -74,7 +74,21 @@ def visualize_min_cut(graph, source, sink):
     plt.show()
 
 
-# 创建一个有向图，添加节点、边和容量，如前面的示例所示
+
+# 创建一个有向图
+G = nx.DiGraph()
+
+# 添加节点和边，以及边的容量
+nodes = ['S', 'A', 'B', 'C', 'D', 'T']
+edges = [('S', 'A', 4), ('S', 'B', 2),
+         ('A', 'B', 3), ('A', 'C', 2),
+         ('B', 'C', 5), ('B', 'D', 2),
+         ('C', 'T', 3), ('D', 'T', 4)]
+
+G.add_nodes_from(nodes)
+G.add_weighted_edges_from(edges, weight='capacity')
+
+
 
 # 指定源节点和汇节点
 source = 'S'
