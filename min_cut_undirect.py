@@ -82,7 +82,7 @@ def visualize_stoer_wagner(graph, min_cut_set, cut_capacity):
     nx.draw_networkx_labels(G, pos, labels=labels)
 
     # 绘制最小割边
-    min_cut_edges = [(i, j) for i in range(len(graph)) for j in range(i+1, len(graph) if (i in min_cut_set) != (j in min_cut_set))]
+    min_cut_edges = [(i, j) for i in range(len(graph)) for j in range(i+1, len(graph)) if (i in min_cut_set) != (j in min_cut_set)]
     nx.draw_networkx_edges(G, pos, edgelist=min_cut_edges, edge_color='r', width=2)
 
     plt.title(f"Min Cut Capacity: {cut_capacity}")
